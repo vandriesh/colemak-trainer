@@ -27,6 +27,8 @@ export function Practice() {
       hand,
       combinationLength
     );
+    // Generate new combinations when exercise is completed
+    setCombinations(getRandomCombinations(hand, combinationLength, 10));
   };
 
   const handleReset = () => {
@@ -58,7 +60,7 @@ export function Practice() {
           <h3 className="text-lg font-semibold text-custom-text mb-4">Hand Preference</h3>
           <HandSelector value={hand} onChange={handleHandChange} />
         </section>
-{/* 
+
         <section>
           <h3 className="text-lg font-semibold text-custom-text mb-4">Combination Length</h3>
           <LengthSelector value={combinationLength} onChange={handleLengthChange} />
@@ -67,7 +69,7 @@ export function Practice() {
         <section>
           <h3 className="text-lg font-semibold text-custom-text mb-4">Practice Mode</h3>
           <PracticeModeSelector mode={practiceMode} onChange={handleModeChange} />
-        </section> */}
+        </section>
       </div>
 
       <KeyboardLayout activeKeys={activeKeys} hand={hand} />
