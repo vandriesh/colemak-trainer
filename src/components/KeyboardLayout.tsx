@@ -1,9 +1,9 @@
 import React from 'react';
-import { leftHandKeys, rightHandKeys } from '../data/colemakLayout';
+import { type Hand, leftHandKeys, rightHandKeys } from '../data/colemakLayout';
 
 interface KeyboardLayoutProps {
   activeKeys: string[];
-  hand: 'left' | 'right';
+  hand: Hand;
 }
 
 export const KeyboardLayout: React.FC<KeyboardLayoutProps> = ({ activeKeys, hand }) => {
